@@ -1,4 +1,4 @@
-from src.extractors.htm_extractor import HTMExtractor
+from src.extractors.txt_extractor import TXTExtractor
 from bs4 import BeautifulSoup
 from os.path import join
 import luigi, os, json
@@ -12,6 +12,7 @@ class TXTTransformer(luigi.Task):
         result = []
         for file in self.input():
             with file.open() as txt_file:
+                txt_file.readline()
                 lines = []
                 line = ""
                 while 1:
@@ -23,15 +24,14 @@ class TXTTransformer(luigi.Task):
                             break
                         else:
                             line = line + str(char)   
-                file.close()
                 for l in lines:
                     line_split = l.split(",")
                     result.append(
                         {
                             "description": line_split[2],
                             "quantity": line_split[3],
-                            "price": line_split[4],
-                            "total": float(line_split[3]) * float(line_split[4]),
+                            "price": line_split[5],
+                            "total": float(line_split[3]) * float(line_split[5]),
                             "invoice": line_split[0],
                             "provider": line_split[6],
                             "country": line_split[7]
