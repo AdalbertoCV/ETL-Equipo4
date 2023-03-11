@@ -1,5 +1,4 @@
 from src.extractors.txt_extractor import TXTExtractor
-from bs4 import BeautifulSoup
 from os.path import join
 import luigi, os, json
 
@@ -19,6 +18,7 @@ class TXTTransformer(luigi.Task):
                     char = txt_file.read(1)         
                     if char ==';':
                         lines.append(line)
+                        line = ""
                     else:
                         if not char:
                             break
