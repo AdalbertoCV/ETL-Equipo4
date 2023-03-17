@@ -29,20 +29,7 @@ Componente responsable de ejecutar el proceso de extracción, transformación y 
     ├── requirements.txt                # dependencias del sistema
 ```
 
-## Prerequisitos
-Para ejecutar este componente es necesario contar con la ejecución de OrientDB, parea ello utilizamos el siguiente comando
-
-``` bash 
-docker run -it -p 5080:5080 -p 6080:6080 -p 8080:8080 -p 9080:9080 --name dgraph dgraph/standalone:latest
-```
-
 ## Instalación 
-Descarga el código del repositorio utilizando el siguiente comando:
-`git clone https://github.com/AdalbertoCV/ETL-Equipo4/`
-
-accede a la carpeta del componente:
-
-`cd gestor-de-datos`
 
 construye la imagen de Docker:
 
