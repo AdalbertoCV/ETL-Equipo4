@@ -27,10 +27,6 @@ Este repositorio contiene los siguientes directorios y archivos
 
 ## Instalación
 
-Descarga el código del repositorio utilizando el siguiente comando:
-
-`git clone https://gitlab.com/tareas-arquitectura-de-software-curso/flujo-de-datos/cliente`
-
 accede a la carpeta del componente
 
 `cd cliente`
