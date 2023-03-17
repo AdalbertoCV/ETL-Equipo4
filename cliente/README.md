@@ -27,10 +27,6 @@ Este repositorio contiene los siguientes directorios y archivos
 
 ## Instalación
 
-accede a la carpeta del componente
-
-`cd cliente`
-
 construye la imagen de Docker
 
 ```shell
